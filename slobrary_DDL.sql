@@ -11,10 +11,9 @@ create table admin_info(
     a_rank varchar(10) not null
 );
 
-
-
 alter table admin_info modify passwd longtext not null;
 alter table admin_info modify a_rank varchar(10);
+alter table admin_info modify passwd varchar(512) not null;
 
 create table member(
 	mem_id varchar(20) primary key,
@@ -32,7 +31,8 @@ create table member(
 
 
 alter table member modify column withdrawal timestamp;
-
+alter table member modify passwd varchar(512) not null;
+alter table member change adress address varchar(100) not null;
 
 create table main_class(
 	m_id char(1) primary key,
@@ -48,7 +48,7 @@ create table sub_class(
     constraint fk_class foreign key(m_id) references main_class(m_id)
 );
 
-
+alter table sub_class modify s_name varchar(100) not null;
 
 create table book_info(
 	id_num varchar(20) primary key,
@@ -68,6 +68,10 @@ create table book_info(
     constraint fk_classid foreign key(class_id) references sub_class(s_id)
 );
 
+alter table book_info modify name varchar(100) not null;
+alter table book_info modify author varchar(100) not null;
+alter table book_info modify issue varchar(200) not null;
+alter table book_info modify form varchar(200) not null;
 
 
 create table book_loan(
@@ -113,6 +117,8 @@ create table recommend(
     primary key(reco_id),
     constraint fk_reco foreign key(book_id) references book_info(id_num)
 );
+
+
 
 
 
