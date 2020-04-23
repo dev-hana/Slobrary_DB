@@ -118,7 +118,15 @@ create table recommend(
     constraint fk_reco foreign key(book_id) references book_info(id_num)
 );
 
-
+create table notice(
+	num int not null auto_increment,
+    admin_id varchar(20),
+    date timestamp default now(),
+    name varchar(50) not null,
+    content mediumtext not null,
+    primary key(num),
+    constraint fk_notice foreign key(admin_id) references admin_info(id)
+);
 
 
 
