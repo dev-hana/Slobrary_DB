@@ -144,7 +144,17 @@ select * from book_info;
 INSERT INTO book_info
 VALUES ('EM207872', '단행본', '팩트풀니스 : 우리가 세상을 오해하는 10가지 이유와 세상이 생각보다 괜찮은 이유', '한스 로슬링 ; 올라 로슬링 ; 안나 로슬링 뢴룬드 [공]지음 ; 이창신 옮김.', '김영사', 
 '파주 : 김영사, 2019.', '473 p. : 삽도, 도표 ; 22 cm.', '9788934985068','180', '한국어', '인문사회자료실', ' 182.3 로58ㅍ ', '대출가능', load_file('c:\\fact.jpg'));
-insert into Book_info(image) values ("fact.jpg");
+
+
+INSERT INTO `slo`.`book_info` 
+(`id_num`, `type`, `name`, `author`, `publisher`, `issue`, `form`, `ISBN`, `class_id`, 
+`language`, `collector`, `sign`, `status`) 
+VALUES ('EM212594', '단행본', '(과학으로 보는)4차 산업과 미래 직업', '이보경', '지브레인. 과학기획팀.', '서울 : 지브레인, 2019.',
+ '199 p. : 채색삽도 ; 23 cm.', '9788959796304', '330', '한국어', '도서관/인문사회자료실-6층/', '336.24 이45ㅅ', '대출가능');
+
+
+
+
 
 /*noticr*/
 insert into notice(admin_id, name, content) values ('wldms3433', 'S:LO', '첫 공지사항 입니다');
