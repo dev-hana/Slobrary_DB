@@ -2,6 +2,7 @@ CREATE DATABASE `slo` DEFAULT CHARACTER SET utf8 ;
 
 use slo;
 
+
 create table admin_info(
 	id varchar(20) primary key,
     passwd varchar(20) not null,
@@ -72,6 +73,8 @@ alter table book_info modify name varchar(100) not null;
 alter table book_info modify author varchar(100) not null;
 alter table book_info modify issue varchar(200) not null;
 alter table book_info modify form varchar(200) not null;
+alter table book_info modify image varchar(20) default null;
+
 
 
 create table book_loan(

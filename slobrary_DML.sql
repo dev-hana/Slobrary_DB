@@ -149,4 +149,5 @@ VALUES ('EM207872', '단행본', '팩트풀니스 : 우리가 세상을 오해�
 /*noticr*/
 insert into notice(admin_id, name, content) values ('wldms3433', 'S:LO', '첫 공지사항 입니다');
 insert into notice(admin_id, name, content) values ('wldms3433', '공지사함', '두번쨰 공지사항 입니다');
+
 select * from notice;
