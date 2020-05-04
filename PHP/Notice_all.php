@@ -22,20 +22,18 @@ $result = mysqli_stmt_get_result($statement);
 
 
 $response = array();
-$response["success"] = false;
-$count = 0;
-$response_r = array();
+$response["success"] = true;
+
 
 while($row = mysqli_fetch_array($result)){
-    $response["success"] = true;
-    $response["num"]= $row["num"];
-    $response["name"]= $row["name"];
-    $response["admin_id"]= $row["admin_id"];
-    $response["date"]= $row["date"];
-    $response_r[$count] = $response;
-    $count = $count + 1;
+    $arr_row = [];
+    $arr_row['name']=$row['name'];
+    $arr_row["admin_id"]= $row["admin_id"];
+    $arr_row["date"]= $row["date"];
+    $response[$row['num']] = $arr_row;
+    
 }
 
-echo json_encode($response_r);
+echo json_encode($response);
 mysqli_close($con);
 ?>
