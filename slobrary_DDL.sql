@@ -102,6 +102,7 @@ create table wish_list(
     primary key(wish_id),
     constraint fk_wishmem foreign key(mem_id) references member(mem_id)
 );
+alter table wish_list modify column status varchar(15) default "신청중";
 
 create table watch_list(
 	watch_id int not null auto_increment,
