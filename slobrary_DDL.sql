@@ -30,7 +30,6 @@ create table member(
     add_date timestamp default now()
 );
 
-
 alter table member modify column withdrawal timestamp;
 alter table member modify passwd varchar(512) not null;
 alter table member change adress address varchar(100) not null;
