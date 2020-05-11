@@ -73,7 +73,7 @@ alter table book_info modify name varchar(100) not null;
 alter table book_info modify author varchar(100) not null;
 alter table book_info modify issue varchar(200) not null;
 alter table book_info modify form varchar(200) not null;
-alter table book_info modify image varchar(20) default "noimage.jpg";
+alter table book_info modify image varchar(20) default "noimage.png";
 alter table book_info modify ISBN bigint not null;
 
 
