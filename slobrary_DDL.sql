@@ -33,6 +33,7 @@ create table member(
 alter table member modify column withdrawal timestamp;
 alter table member modify passwd varchar(512) not null;
 alter table member change adress address varchar(100) not null;
+alter table member modify loan_status varchar(15) default '대출가능';
 
 create table main_class(
 	m_id char(1) primary key,

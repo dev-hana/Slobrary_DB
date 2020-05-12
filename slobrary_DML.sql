@@ -3,7 +3,7 @@ use slo;
 /* admin_info*/
 select * from admin_info;
 insert into admin_info values ( 'wldms3433', 'jang9703', '장지은', '01091473246', now(), 'master');
-
+select admin_id, name from admin_info where admin_id='wldms3433';
 
 /*member*/
 select * from member;
