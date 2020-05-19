@@ -91,6 +91,9 @@ create table book_loan(
     primary key(loan_id)
 );
 
+ALTER TABLE book_loan DROP EX_NUM;
+ALTER TABLE book_loan MODIFY return_date TIMESTAMP;
+
 create table wish_list(
 	wish_id int NOT NULL AUTO_INCREMENT,
     mem_id varchar(40) not null,
