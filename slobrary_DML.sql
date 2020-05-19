@@ -3,17 +3,15 @@ use slo;
 /* admin_info*/
 select * from admin_info;
 insert into admin_info values ( 'wldms3433', 'jang9703', '장지은', '01091473246', now(), 'master');
-select admin_id, name from admin_info where admin_id='wldms3433';
+
 
 /*member*/
 select * from member;
-
 update member set withdrawal = now() where mem_id = 'dw';
 update member set withdrawal = null where mem_id = 'test';
 
-select mem_id, name, gender, birth, phone, adress, email, loan_status, add_date from member
-where withdrawal is null;
-
+select mem_id, passwd from member where mem_id = 'test';
+select mem_id, withdrawal from member where mem_id = 'hana';
 
 /*main_class*/
 insert main_class values('0', '총류');
@@ -152,7 +150,8 @@ INSERT INTO `slo`.`book_info`
 VALUES ('EM212594', '단행본', '(과학으로 보는)4차 산업과 미래 직업', '이보경', '지브레인. 과학기획팀.', '서울 : 지브레인, 2019.',
  '199 p. : 채색삽도 ; 23 cm.', '9788959796304', '330', '한국어', '도서관/인문사회자료실-6층/', '336.24 이45ㅅ', '대출가능');
 
-
+/*wish_list*/
+select * from wish_list;
 
 
 
