@@ -152,8 +152,16 @@ VALUES ('EM212594', '단행본', '(과학으로 보는)4차 산업과 미래 직
 
 /*wish_list*/
 select * from wish_list;
+select * from wish_list where mem_id = 'test';
 
+/* book_loan */
+select * from book_loan;
+insert into book_loan(mem_id, id_num, return_date, return_type) values ('comghana', 'EM212594', now(), "정상반납");
+insert into book_loan(mem_id, id_num) values ('comghana', 'EM207872');
 
+/* watch_list*/
+select * from watch_list;
+insert into watch_list(mem_id, book_id) values ('comghana', 'EM212594');
 
 /*noticr*/
 insert into notice(admin_id, name, content) values ('wldms3433', 'S:LO', '첫 공지사항 입니다');

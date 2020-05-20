@@ -73,7 +73,7 @@ alter table book_info modify name varchar(100) not null;
 alter table book_info modify author varchar(100) not null;
 alter table book_info modify issue varchar(200) not null;
 alter table book_info modify form varchar(200) not null;
-alter table book_info modify image varchar(20) default "noimage.png";
+alter table book_info modify image varchar(100) default "noimage.png";
 alter table book_info modify ISBN bigint not null;
 
 
@@ -91,8 +91,11 @@ create table book_loan(
     primary key(loan_id)
 );
 
+alter table book_loan add column status varchar(20) not null default "대출";
+
 ALTER TABLE book_loan DROP EX_NUM;
 ALTER TABLE book_loan MODIFY return_date TIMESTAMP;
+
 
 create table wish_list(
 	wish_id int NOT NULL AUTO_INCREMENT,
