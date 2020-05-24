@@ -29,6 +29,7 @@ insert main_class values('9', '역사');
 /*sub_class*/
 select * from sub_class;
 
+insert into sub_class values('000', '총류');
 insert into sub_class(s_id, s_name, m_id) values('010', '도서학,서지학', '0');
 insert into sub_class(s_id, s_name, m_id) values('020', '문헌정보학', '0');
 insert into sub_class(s_id, s_name, m_id) values('030', '백과사전', '0');
@@ -39,6 +40,7 @@ insert into sub_class(s_id, s_name, m_id) values('070', '신문,언론,저널리
 insert into sub_class(s_id, s_name, m_id) values('080', '일반전집,총서', '0');
 insert into sub_class(s_id, s_name, m_id) values('090', '향토자료', '0');
 
+insert into sub_class values('100', '철학');
 insert into sub_class(s_id, s_name, m_id) values('110', '형이상학', '1');
 insert into sub_class(s_id, s_name, m_id) values('120', '인식론,인과론,인간학', '1');
 insert into sub_class(s_id, s_name, m_id) values('130', '철학의 체계', '1');
@@ -49,6 +51,7 @@ insert into sub_class(s_id, s_name, m_id) values('170', '논리학', '1');
 insert into sub_class(s_id, s_name, m_id) values('180', '심리학', '1');
 insert into sub_class(s_id, s_name, m_id) values('190', '윤리학,도덕철학', '1');
 
+insert into sub_class values('200', '종교');
 insert into sub_class(s_id, s_name, m_id) values('210', '비교종교', '2');
 insert into sub_class(s_id, s_name, m_id) values('220', '불교', '2');
 insert into sub_class(s_id, s_name, m_id) values('230', '기독교', '2');
@@ -59,6 +62,7 @@ insert into sub_class(s_id, s_name, m_id) values('270', '힌두교,브라만교'
 insert into sub_class(s_id, s_name, m_id) values('280', '이슬람교(회교)', '2');
 insert into sub_class(s_id, s_name, m_id) values('290', '기타 제종교', '2');
 
+insert into sub_class values('300', '사회과학');
 insert into sub_class(s_id, s_name, m_id) values('310', '통계학', '3');
 insert into sub_class(s_id, s_name, m_id) values('320', '경제학', '3');
 insert into sub_class(s_id, s_name, m_id) values('330', '사회학,사회문제', '3');
@@ -69,6 +73,7 @@ insert into sub_class(s_id, s_name, m_id) values('370', '교육학', '3');
 insert into sub_class(s_id, s_name, m_id) values('380', '풍석,예절,민속학', '3');
 insert into sub_class(s_id, s_name, m_id) values('390', '국방,군사학', '3');
 
+insert into sub_class values('400', '자연과학');
 insert into sub_class(s_id, s_name, m_id) values('410', '수학', '4');
 insert into sub_class(s_id, s_name, m_id) values('420', '물리학', '4');
 insert into sub_class(s_id, s_name, m_id) values('430', '화학', '4');
@@ -79,7 +84,7 @@ insert into sub_class(s_id, s_name, m_id) values('470', '생명과학', '4');
 insert into sub_class(s_id, s_name, m_id) values('480', '식물학', '4');
 insert into sub_class(s_id, s_name, m_id) values('490', '동물학', '4');
 
-
+insert into sub_class values('500', '기술과학');
 insert into sub_class(s_id, s_name, m_id) values('510', '의학', '5');
 insert into sub_class(s_id, s_name, m_id) values('520', '농업,농학', '5');
 insert into sub_class(s_id, s_name, m_id) values('530', '공학,공업일반,토목공학,환경공학', '5');
@@ -90,6 +95,7 @@ insert into sub_class(s_id, s_name, m_id) values('570', '화학공학', '5');
 insert into sub_class(s_id, s_name, m_id) values('580', '제조업', '5');
 insert into sub_class(s_id, s_name, m_id) values('590', '생활과학', '5');
 
+insert into sub_class values('600', '예술');
 insert into sub_class(s_id, s_name, m_id) values('610', '건축물', '6');
 insert into sub_class(s_id, s_name, m_id) values('620', '조각,조형예술', '6');
 insert into sub_class(s_id, s_name, m_id) values('630', '공예,장식미술', '6');
@@ -100,6 +106,7 @@ insert into sub_class(s_id, s_name, m_id) values('670', '음악', '6');
 insert into sub_class(s_id, s_name, m_id) values('680', '공연예술,매체예술', '6');
 insert into sub_class(s_id, s_name, m_id) values('690', '오락,스포츠', '6');
 
+insert into sub_class values('700', '언어');
 insert into sub_class(s_id, s_name, m_id) values('710', '한국어', '7');
 insert into sub_class(s_id, s_name, m_id) values('720', '중국어', '7');
 insert into sub_class(s_id, s_name, m_id) values('730', '일본어,기타아시아제어', '7');
@@ -110,6 +117,7 @@ insert into sub_class(s_id, s_name, m_id) values('770', '스페인어,포루투�
 insert into sub_class(s_id, s_name, m_id) values('780', '이탈리아어', '7');
 insert into sub_class(s_id, s_name, m_id) values('790', '기타제어', '7');
 
+insert into sub_class values('800', '문학');
 insert into sub_class(s_id, s_name, m_id) values('810', '한국문학', '8');
 insert into sub_class(s_id, s_name, m_id) values('820', '중국문학', '8');
 insert into sub_class(s_id, s_name, m_id) values('830', '일본문학,기타아시아문학', '8');
@@ -120,6 +128,7 @@ insert into sub_class(s_id, s_name, m_id) values('870', '스페인,포르투칼�
 insert into sub_class(s_id, s_name, m_id) values('880', '이탈리아문학', '8');
 insert into sub_class(s_id, s_name, m_id) values('890', '기타제문학', '8');
 
+insert into sub_class values('900', '역사');
 insert into sub_class(s_id, s_name, m_id) values('910', '아시아', '9');
 insert into sub_class(s_id, s_name, m_id) values('920', '유럽', '9');
 insert into sub_class(s_id, s_name, m_id) values('930', '아프리카', '9');
@@ -129,6 +138,7 @@ insert into sub_class(s_id, s_name, m_id) values('960', '오세아니아', '9');
 insert into sub_class(s_id, s_name, m_id) values('970', '양극지방', '9');
 insert into sub_class(s_id, s_name, m_id) values('980', '지리', '9');
 insert into sub_class(s_id, s_name, m_id) values('990', '전기', '9');
+
 
 select count(*) from sub_class;
 select * from sub_class;
