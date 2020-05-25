@@ -138,6 +138,6 @@ create table notice(
     primary key(num),
     constraint fk_notice foreign key(admin_id) references admin_info(id)
 );
-
+alter table notice modify content longtext not null;
 
 
