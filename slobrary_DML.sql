@@ -176,5 +176,5 @@ insert into watch_list(mem_id, book_id) values ('comghana', 'EM212594');
 /*noticr*/
 insert into notice(admin_id, name, content) values ('wldms3433', 'S:LO', '첫 공지사항 입니다');
 insert into notice(admin_id, name, content) values ('wldms3433', '공지사함', '두번쨰 공지사항 입니다');
-
+update notice set name='당분간 교수님도 카카오톡에서 만나요. 온라인수업 사이버강의', content='두번째 공지사항입니다.', date=now() where num=2;
 select * from notice;

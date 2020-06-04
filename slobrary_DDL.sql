@@ -12,9 +12,21 @@ create table admin_info(
     a_rank varchar(10) not null
 );
 
+
+
+
+
 alter table admin_info modify passwd longtext not null;
 alter table admin_info modify a_rank varchar(10);
 alter table admin_info modify passwd varchar(512) not null;
+
+create table admin_request(
+	id varchar(20) primary key,
+    passwd varchar(512) not null,
+    name varchar(15) not null,
+    phone char(11) not null UNIQUE,
+    req_date TIMESTAMP DEFAULT NOW()
+);
 
 create table member(
 	mem_id varchar(20) primary key,
@@ -75,10 +87,12 @@ alter table book_info modify issue varchar(200) not null;
 alter table book_info modify form varchar(200) not null;
 alter table book_info modify image varchar(100) default "noimage.png";
 alter table book_info modify ISBN bigint not null;
+alter table book_info add column add_date timestamp default now();
 
 
 
-create table book_loan(
+
+create table book_loan(book_info
 	loan_id int NOT NULL AUTO_INCREMENT,
 	mem_id varchar(20) not null,
     id_num varchar(20) not null,
