@@ -144,6 +144,17 @@ create table recommend(
     constraint fk_reco foreign key(book_id) references book_info(id_num)
 );
 
+
+create table bestseller(
+	best_id int not null auto_increment,
+    book_id varchar(40) not null,
+    admin_id varchar(20) not null,
+    best_date timestamp default now(),
+    primary key(best_id),
+    constraint fk_best foreign key(book_id) references book_info(id_num),
+    constraint fk_best_id foreign key(admin_id) references admin_info(id)
+);
+
 create table notice(
 	num int not null auto_increment,
     admin_id varchar(20),
