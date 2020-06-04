@@ -154,6 +154,7 @@ create table bestseller(
     constraint fk_best foreign key(book_id) references book_info(id_num),
     constraint fk_best_id foreign key(admin_id) references admin_info(id)
 );
+alter table bestseller modify book_id varchar(40) not null unique;
 
 create table notice(
 	num int not null auto_increment,
@@ -165,5 +166,6 @@ create table notice(
     constraint fk_notice foreign key(admin_id) references admin_info(id)
 );
 alter table notice modify content longtext not null;
+
 
 
