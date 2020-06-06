@@ -171,6 +171,11 @@ select * from wish_list where mem_id = 'test';
 select * from book_loan;
 insert into book_loan(mem_id, id_num, return_date, return_type) values ('comghana', 'EM212594', now(), "정상반납");
 insert into book_loan(mem_id, id_num) values ('comghana', 'EM207872');
+insert into book_loan(mem_id, id_num) values ('test', 'EC1890');
+insert into book_loan(mem_id, id_num) values ('test', 'EM208436');
+insert into book_loan(mem_id, id_num, return_date, return_type) values ('test', 'EM198430', now(), "정상반납");
+insert into book_loan(mem_id, id_num, return_date, return_type) values ('test', 'EM211046', now(), "연체반납");
+
 
 /* watch_list*/
 select * from watch_list;

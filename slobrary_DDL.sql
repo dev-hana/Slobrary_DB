@@ -112,7 +112,7 @@ alter table book_loan add column status varchar(20) not null default "대출";
 
 ALTER TABLE book_loan DROP EX_NUM;
 ALTER TABLE book_loan MODIFY return_date TIMESTAMP;
-
+select * from book_loan;
 
 create table wish_list(
 	wish_id int NOT NULL AUTO_INCREMENT,
