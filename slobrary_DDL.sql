@@ -27,6 +27,8 @@ create table admin_request(
     phone char(11) not null UNIQUE,
     req_date TIMESTAMP DEFAULT NOW()
 );
+alter table admin_request add column a_rank varchar(10) not null;
+select * from admin_request;
 
 create table member(
 	mem_id varchar(20) primary key,

@@ -5,6 +5,9 @@ select * from admin_info;
 insert into admin_info values ( 'wldms3433', 'jang9703', '장지은', '01091473246', now(), 'master');
 
 
+select * from admin_request;
+
+
 /*member*/
 select * from member;
 update member set withdrawal = now() where mem_id = 'dw';
