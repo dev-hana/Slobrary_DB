@@ -176,6 +176,10 @@ insert into book_loan(mem_id, id_num) values ('test', 'EM208436');
 insert into book_loan(mem_id, id_num, return_date, return_type) values ('test', 'EM198430', now(), "정상반납");
 insert into book_loan(mem_id, id_num, return_date, return_type) values ('test', 'EM211046', now(), "연체반납");
 
+select a.id_num, b.name, b.author, b.publisher, a.loan_date, b.image, a.return_date, a.return_type
+from book_loan a, book_info b
+where mem_id = 'test' and a.status = '반납' and a.id_num=b.id_num;
+
 
 /* watch_list*/
 select * from watch_list;
