@@ -174,8 +174,7 @@ insert into book_loan(mem_id, id_num) values ('comghana', 'EM207872');
 insert into book_loan(mem_id, id_num) values ('test', 'EC1890');
 insert into book_loan(mem_id, id_num) values ('test', 'EM208436');
 insert into book_loan(mem_id, id_num, return_date, return_type) values ('test', 'EM198430', now(), "정상반납");
-insert into book_loan(mem_id, id_num, return_date, return_type) values ('test', 'EM211046', now(), "연체반납");
-
+UPDATE `slo`.`book_loan` SET `return_date` = null, `return_type` = null, `status` = '대출' WHERE (`loan_id` = '25');
 select a.id_num, b.name, b.author, b.publisher, a.loan_date, b.image, a.return_date, a.return_type
 from book_loan a, book_info b
 where mem_id = 'test' and a.status = '반납' and a.id_num=b.id_num;
