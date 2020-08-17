@@ -30,6 +30,13 @@ create table admin_request(
 alter table admin_request add column a_rank varchar(10) not null;
 select * from admin_request;
 
+create table rfid_info(
+	fullcode int primary key,
+    cardcode varchar(15) not null unique,
+    facility varchar(10)
+);
+
+
 create table member(
 	mem_id varchar(20) primary key,
     RFID longtext,
@@ -49,6 +56,10 @@ alter table member modify passwd varchar(512) not null;
 alter table member change adress address varchar(100) not null;
 alter table member modify loan_status varchar(15) default '대출가능';
 alter table member add column profile_img varchar(15) default 'girl1.png';
+alter table member modify column profile_img varchar(15) default 'girl1.png';
+alter table member change RFID int;
+alter table member add constraint rfidfk foreign key(RFID) references rfid_info (fullcode);
+desc member;
 
 create table main_class(
 	m_id char(1) primary key,
@@ -95,7 +106,7 @@ alter table book_info add column add_date timestamp default now();
 
 
 
-create table book_loan(book_info
+create table book_loan(
 	loan_id int NOT NULL AUTO_INCREMENT,
 	mem_id varchar(20) not null,
     id_num varchar(20) not null,
@@ -125,18 +136,18 @@ create table wish_list(
     primary key(wish_id),
     constraint fk_wishmem foreign key(mem_id) references member(mem_id)
 );
+desc wish_list;
 alter table wish_list modify column status varchar(15) default "신청중";
 
 create table watch_list(
-	watch_id int not null auto_increment,
-	mem_id varchar(20) not null,
-    book_id varchar(40) not null,
+	mem_id varchar(30) not null,
+    book_id varchar(20) not null,
     watch_date timestamp default now(),
-    primary key(watch_id),
-    constraint fk_watchmem foreign key(mem_id) references member(mem_id),
-    constraint fk_bookatch foreign key(book_id) references book_info(id_num)
+    primary key(mem_id, book_id)
 );
 
+alter table watch_list add constraint fk_watchm foreign key(mem_id) references member(mem_id);
+alter table watch_list add constraint fk_watchb foreign key(book_id) references book_info(id_num);
 
 create table recommend(
 	reco_id int not null auto_increment,
@@ -157,6 +168,7 @@ create table bestseller(
     constraint fk_best_id foreign key(admin_id) references admin_info(id)
 );
 alter table bestseller modify book_id varchar(40) not null unique;
+select * from bestseller;
 
 create table notice(
 	num int not null auto_increment,
@@ -168,6 +180,9 @@ create table notice(
     constraint fk_notice foreign key(admin_id) references admin_info(id)
 );
 alter table notice modify content longtext not null;
-
+create table test(
+	mem_id varchar(30) not null,
+    constraint fk_test foreign key(mem_id) references member(mem_id)
+);
 
 
