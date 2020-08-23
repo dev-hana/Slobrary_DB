@@ -194,3 +194,6 @@ select * from notice;
 
 select * from rating_info;
 insert into rating_info(book_id) (select id_num from book_info);
+
+
+select * from book_report;

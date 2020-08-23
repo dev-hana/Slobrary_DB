@@ -214,3 +214,4 @@ create table book_report(
 
 alter table book_report add constraint fk_repm foreign key(mem_id) references member(mem_id);
 alter table book_report add constraint fk_repb foreign key(book_id) references book_info(id_num);
+alter table book_report modify column locked varchar(10) default 'public';
