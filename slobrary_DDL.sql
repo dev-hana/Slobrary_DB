@@ -52,7 +52,7 @@ create table member(
 );
 
 alter table member modify column withdrawal timestamp;
-alter table member modify passwd varchar(512) not nbook_infoull;
+alter table member modify passwd varchar(512) not null;
 alter table member change adress address varchar(100) not null;
 alter table member modify loan_status varchar(15) default '대출가능';
 alter table member add column profile_img varchar(15) default 'girl1.png';
@@ -181,37 +181,16 @@ create table notice(
 );
 alter table notice modify content longtext not null;
 
-
-create table rating_info(
- book_id varchar(20) primary key,
- all_score int default 0,
- count int default 0,
- rating int default 0
-);
-alter table rating_info add constraint fk_rate foreign key(book_id) references book_info(id_num);
-
-create table review(
-	mem_id varchar(30),
-    book_id varchar(20),
-    content longtext not null,
-    rv_date timestamp default now(),
-    rating int not null
-);
-
-alter table review add constraint fk_rem foreign key(mem_id) references member(mem_id);
-alter table review add constraint fk_reb foreign key(book_id) references book_info(id_num);
-
-create table book_report(
-	report_id int not null auto_increment,
+create table diary(
+	diary_id int not null auto_increment,
     mem_id varchar(30),
     book_id varchar(20),
-    name varchar(50) not null,
-    content mediumtext not null,
-    report_date timestamp default now(),
-    locked varchar(6) default 'false',
-    primary key(report_id)
+    page int,
+    sentence varchar(100),
+    content longtext not null,
+    diary_date timestamp default now()
 );
 
-alter table book_report add constraint fk_repm foreign key(mem_id) references member(mem_id);
-alter table book_report add constraint fk_repb foreign key(book_id) references book_info(id_num);
-alter table book_report modify column locked varchar(10) default 'public';
+
+
+

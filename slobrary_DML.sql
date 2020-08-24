@@ -28,7 +28,7 @@ insert main_class values('7', '언어');
 insert main_class values('8', '문학');
 insert main_class values('9', '역사');
 
-
+select * from main_class;
 /*sub_class*/
 select * from sub_class;
 
@@ -147,6 +147,7 @@ select count(*) from sub_class;
 select * from sub_class;
 
 delete from sub_class where s_id is null;
+select * from sub_class where s_id = '330';
 
 
 /*book_info*/
@@ -162,8 +163,9 @@ INSERT INTO `slo`.`book_info`
 `language`, `collector`, `sign`, `status`) 
 VALUES ('EM212594', '단행본', '(과학으로 보는)4차 산업과 미래 직업', '이보경', '지브레인. 과학기획팀.', '서울 : 지브레인, 2019.',
  '199 p. : 채색삽도 ; 23 cm.', '9788959796304', '330', '한국어', '도서관/인문사회자료실-6층/', '336.24 이45ㅅ', '대출가능');
-select distinct name from book_info where author = '이지성';
-select image fromrating_info book_info where id_num = "EC1890";
+select * from book_info where isbn='9791188388905';
+select distinct name, isbn from book_info where author='이지성';
+select * from book_info where isbn='9788974254896';
 
 /*wish_list*/
 select * from wish_list;
@@ -193,7 +195,3 @@ update notice set name='당분간 교수님도 카카오톡에서 만나요. 온
 select * from notice;
 
 select * from rating_info;
-insert into rating_info(book_id) (select id_num from book_info);
-
-
-select * from book_report;
