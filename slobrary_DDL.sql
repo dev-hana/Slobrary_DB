@@ -188,8 +188,25 @@ create table diary(
     page int,
     sentence varchar(100),
     content longtext not null,
-    diary_date timestamp default now()
+    diary_date timestamp default now(),
+    primary key(diary_id)
 );
+
+alter table diary add constraint fk_diarym foreign key(mem_id) references member(mem_id);
+alter table diary add constraint fk_diaryb foreign key(book_id) references book_info(id_num);
+
+create table free_board(
+	board_id int not null auto_increment,
+    mem_id varchar(30),
+    title varchar(20) not null,
+    content longtext not null,
+    board_date timestamp default now(),
+    scope varchar(10) not null default 'public',
+    primary key(board_id)
+);
+
+alter table free_board add constraint fk_boardm foreign key(mem_id) references member(mem_id);
+
 
 
 

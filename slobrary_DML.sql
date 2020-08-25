@@ -195,3 +195,6 @@ update notice set name='당분간 교수님도 카카오톡에서 만나요. 온
 select * from notice;
 
 select * from rating_info;
+
+
+select * from diary;
